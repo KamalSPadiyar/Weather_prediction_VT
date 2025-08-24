@@ -1,0 +1,46 @@
+{
+    "safety": {
+        "max_height_meters": 12.0,
+        "warning_height_meters": 10.0
+    },
+    "calibration": {
+        "pixels_per_meter": 15.0,
+        "reference_object_height_meters": 5.0
+    },
+    "detection": {
+        "flame_color_lower": [5, 50, 50],
+        "flame_color_upper": [35, 255, 255],
+        "min_contour_area": 1500,
+        "flare_confidence_threshold": 0.65,
+        "motion_threshold": 25,
+        "brightness_threshold": 140,
+        "aspect_ratio_range": [0.2, 2.5],
+        "temporal_consistency_frames": 7,
+        "flare_shape_circularity": 0.25,
+        "intensity_variation_threshold": 45,
+        "background_subtraction_enabled": true
+    },
+    "alerts": {
+        "email_enabled": true,
+        "email_smtp": "smtp.gmail.com",
+        "email_port": 587,
+        "sender_email": "kamalsinghpadiyar1919@gmail.com",
+        "sender_password": "dhol avoh ceqn isuf",
+        "recipients": [
+            "kamalpadiyar191919@gmail.com"
+        ],
+        "audio_enabled": true,
+        "audio_file": "alarm.wav"
+    },
+    "monitoring": {
+        "check_interval_seconds": 1.5,
+        "log_file": "enhanced_flare_monitor.log"
+    },
+    "camera": {
+        "mobile_ip_cam_url": "http://192.0.0.4:8080/video",
+        "rtsp_url": "rtsp://username:password@ip:port/stream",
+        "http_stream_url": "http://ip:port/mjpg/video.mjpg",
+        "connection_timeout": 15
+    }
+}
+

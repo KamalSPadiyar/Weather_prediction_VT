@@ -1,0 +1,11 @@
+2025-07-01 19:08:02,097 - ERROR - Failed to open camera
+2025-07-01 19:09:19,866 - ERROR - Failed to open camera
+2025-07-01 19:10:28,982 - ERROR - Failed to open camera
+2025-07-01 19:10:48,035 - INFO - Starting enhanced live flare monitoring
+2025-07-01 19:10:48,093 - CRITICAL - CRITICAL ALERT: Flare height exceeded threshold!
+Current height: 72.00 meters
+Threshold: 12.00 meters
+Time: 2025-07-01 19:10:48
+
+2025-07-01 19:10:52,924 - INFO - Email alert sent successfully
+2025-07-01 19:11:25,431 - INFO - Alarm reset
