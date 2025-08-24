@@ -1,0 +1,99 @@
+# PPE Detection Configuration
+
+# Model settings
+model:
+  name: "yolov8n"  # YOLOv8 nano for faster inference
+  weights_path: "data/models/ppe_detection.pt"
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  input_size: [640, 640]
+
+# PPE Classes to detect
+ppe_classes:
+  - helmet
+  - safety_vest
+  - gloves
+  - safety_boots
+  - safety_goggles
+
+# Video processing settings
+video:
+  frame_skip: 1  # Process every nth frame
+  resize_width: 640
+  resize_height: 480
+  buffer_size: 30
+
+# Alert system
+alerts:
+  enabled: true
+  alert_threshold: 3  # Number of consecutive non-compliant frames
+  notification_methods:
+    - email
+    - webhook
+    - dashboard
+  
+  email:
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    sender_email: "alerts@iocl.com"
+    recipients:
+      - "safety@iocl.com"
+      - "security@iocl.com"
+
+# Dashboard settings
+dashboard:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  update_interval: 1000  # milliseconds
+
+# Database settings
+database:
+  type: "sqlite"
+  path: "data/detection_logs.db"
+  
+# Logging
+logging:
+  level: "INFO"
+  file_path: "logs/ppe_detection.log"
+  max_file_size: "10MB"
+  backup_count: 5
+
+# Camera settings
+camera:
+  default_source: 0  # Default camera index
+  rtsp_urls:
+    - "rtsp://camera1.iocl.local:554/stream"
+    - "rtsp://camera2.iocl.local:554/stream"
+  
+# Performance settings
+performance:
+  use_gpu: true
+  gpu_memory_fraction: 0.8
+  max_concurrent_streams: 4
+
+# Compliance rules
+compliance:
+  required_ppe:
+    helmet: true
+    safety_vest: true
+    gloves: false  # Optional
+    safety_boots: true
+    safety_goggles: false  # Area-specific
+  
+  areas:
+    high_risk:
+      required_ppe:
+        helmet: true
+        safety_vest: true
+        gloves: true
+        safety_boots: true
+        safety_goggles: true
+    
+    medium_risk:
+      required_ppe:
+        helmet: true
+        safety_vest: true
+        gloves: false
+        safety_boots: true
+        safety_goggles: false

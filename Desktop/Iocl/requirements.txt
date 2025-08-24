@@ -1,0 +1,52 @@
+# Core dependencies for PPE detection system
+opencv-python==4.8.1.78
+torch==2.0.1
+torchvision==0.15.2
+ultralytics==8.0.196  # YOLOv8
+numpy==1.24.3
+pandas==2.0.3
+Pillow==10.0.0
+
+# Web framework and API
+flask==2.3.3
+flask-cors==4.0.0
+flask-socketio==5.3.6
+
+# Image and video processing
+imageio==2.31.1
+scikit-image==0.21.0
+moviepy==1.0.3
+
+# Machine learning utilities
+scikit-learn==1.3.0
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# Configuration and utilities
+pyyaml==6.0.1
+python-dotenv==1.0.0
+tqdm==4.66.1
+requests==2.31.0
+
+# Database (sqlite3 is built into Python)
+# sqlite3
+
+# Monitoring and logging (built into Python)
+# logging
+psutil==5.9.5
+
+# Development and testing
+pytest==7.4.0
+pytest-cov==4.1.0
+black==23.7.0
+flake8==6.0.0
+
+# Additional computer vision tools
+imutils==0.5.4
+albumentations==1.3.1
+
+# Real-time communication
+websockets==11.0.3
+
+# For deployment
+gunicorn==21.2.0
