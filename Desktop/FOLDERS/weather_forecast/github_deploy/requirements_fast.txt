@@ -1,0 +1,10 @@
+# Lightweight requirements for faster Railway deployment
+torch==2.0.0+cpu --find-links https://download.pytorch.org/whl/torch_stable.html
+torchvision==0.15.0+cpu --find-links https://download.pytorch.org/whl/torch_stable.html
+numpy==1.24.3
+pandas==2.0.2
+scikit-learn==1.2.2
+requests==2.31.0
+flask==2.3.2
+Pillow==9.5.0
+# Removed matplotlib, seaborn, scipy to reduce size

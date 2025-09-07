@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: weather-prediction-system
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python web_app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+    disk:
+      name: weather-data
+      mountPath: /tmp
+      sizeGB: 1
