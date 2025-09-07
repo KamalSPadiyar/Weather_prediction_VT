@@ -58,3 +58,89 @@ Thumbs.db
 
 # Streamlit
 .streamlit/
+
+# Exclude all parent directories and unrelated projects
+../*
+../../*
+../../../*
+Test/
+setup_and_run.bat
+
+# Exclude user-specific files and directories
+Application Data/
+Cookies/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Start Menu/
+Templates/
+3D Objects/
+AppData/
+Contacts/
+Downloads/
+Documents/
+Favorites/
+Links/
+Microsoft/
+Music/
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+anaconda3/
+
+# Exclude IOCL and other unrelated projects
+**/IOCL*/
+**/IOCL_*/
+**/iocl*/
+**/flare*/
+**/FLARE*/
+
+# Exclude other unrelated project directories
+**/AGENTIC_AI/
+**/AMEX/
+**/DBSCAN/
+**/Deployed-projects/
+**/GIT_TUT1/
+**/L-A-Project/
+**/Llama3_grog/
+**/RECENT/
+**/TUTorial/
+**/Travel_agent/
+**/UDE/
+**/YantraPragya/
+**/Ynatra__pragya*/
+**/blind-object_detector/
+**/llm_email/
+**/llm_mail/
+**/multi-agents/
+**/MTP/
+**/PLacement/
+**/PROF_Project/
+**/placement_stuff/
+**/old_files/
+
+# Exclude system and temporary files
+*.lnk
+*.ini
+*.dat
+*.LOG*
+*.blf
+*.regtrans-ms
+*.xlsx
+*.docx
+*.pdf
+*.exe
+*.json
+package-lock.json
+package.json
+*.ipynb
+vectorstore/
+runs/
+streamlit
+client/
+my-*/
